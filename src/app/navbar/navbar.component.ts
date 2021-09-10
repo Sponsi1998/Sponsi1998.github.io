@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
-import { BackgroundMusicService } from '../background-music.service';
 
 @Component({
   selector: 'app-navbar',
@@ -12,33 +11,7 @@ export class NavbarComponent implements OnInit {
   value: number = 50;
   playPauseButton: string = "";
 
-  constructor(private http: HttpClient, private router: Router, private backgroundMusicService: BackgroundMusicService) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {}
-  //   if(this.backgroundMusicService.isMusicPlaying){
-  //     this.playPauseButton = "green";
-  //   }
-  //   else{
-  //     this.playPauseButton = "red";
-  //   }
-  // }
-
-  // get volumen(){
-  //   return this.value;
-  // }
-
-  // set volumen(num:number){
-  //   this.value = num;
-  //   this.backgroundMusicService.setMusicVol(num);
-  // }
-
-  // toggleMusic(){
-  //   this.backgroundMusicService.toggleMusic();
-  //   if(this.backgroundMusicService.isMusicPlaying){
-  //     this.playPauseButton = "green";
-  //   }
-  //   else{
-  //     this.playPauseButton = "red";
-  //   }
-  // }
 }
