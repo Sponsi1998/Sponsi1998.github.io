@@ -14,31 +14,31 @@ export class NavbarComponent implements OnInit {
 
   constructor(private http: HttpClient, private router: Router, private backgroundMusicService: BackgroundMusicService) { }
 
-  ngOnInit() {
-    if(this.backgroundMusicService.isMusicPlaying){
-      this.playPauseButton = "green";
-    }
-    else{
-      this.playPauseButton = "red";
-    }
-  }
+  ngOnInit() {}
+  //   if(this.backgroundMusicService.isMusicPlaying){
+  //     this.playPauseButton = "green";
+  //   }
+  //   else{
+  //     this.playPauseButton = "red";
+  //   }
+  // }
 
-  get volumen(){
-    return this.value;
-  }
+  // get volumen(){
+  //   return this.value;
+  // }
 
-  set volumen(num:number){
-    this.value = num;
-    this.backgroundMusicService.setMusicVol(num);
-  }
+  // set volumen(num:number){
+  //   this.value = num;
+  //   this.backgroundMusicService.setMusicVol(num);
+  // }
 
-  toggleMusic(){
-    this.backgroundMusicService.toggleMusic();
-    if(this.backgroundMusicService.isMusicPlaying){
-      this.playPauseButton = "green";
-    }
-    else{
-      this.playPauseButton = "red";
-    }
-  }
+  // toggleMusic(){
+  //   this.backgroundMusicService.toggleMusic();
+  //   if(this.backgroundMusicService.isMusicPlaying){
+  //     this.playPauseButton = "green";
+  //   }
+  //   else{
+  //     this.playPauseButton = "red";
+  //   }
+  // }
 }
